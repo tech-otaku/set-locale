@@ -22,7 +22,7 @@ timedatectl set-timezone Europe/London
 timedatectl set-ntp true
 
 # Add `setxkbmap` to .profile so it runs at login and sets the keyboard correctly
-tee -a .profile <<EOF
+tee -a ~/.profile <<EOF
 
 # Set keyboard model and layout
 setxkbmap -model apple -layout gb
@@ -71,7 +71,7 @@ amixer cset iface=MIXER,name="Master Playback Volume" 25 >/dev/null
 
 clear
 
-source .bashrc
+source ~/.bashrc
 
 #read -p "Press enter to logout"
 #gnome-session-quit
