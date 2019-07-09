@@ -2,6 +2,13 @@
 
 # Basic keyboard, language and time configuration for a vanilla Ubuntu 18.04 LTS install on VMware Fusion (10.1.3)
 
+# USAGE: 
+# wget -O /home/steve/Downloads/set-locale.zip https://codeload.github.com/tech-otaku/set-locale/zip/master
+# cd /home/steve/Downloads
+# unzip /home/steve/Downloads/set-locale.zip
+# bash /home/steve/Downloads/set-locale.sh
+
+
 # Ask for the administrator password upfront
 sudo -v
 
