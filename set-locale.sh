@@ -22,7 +22,7 @@ tee -a .bashrc <<EOF
 setxkbmap -model apple -layout gb
 
 # Message to display for each new Terminal window
-printf "Use control+\ for # character\n\n"
+printf "Use 'control [ctrl]+\' for # character\n\n"
 
 EOF
 fi
