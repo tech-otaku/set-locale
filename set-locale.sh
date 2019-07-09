@@ -21,8 +21,8 @@ timedatectl set-timezone Europe/London
 # Enable network time synchronization
 timedatectl set-ntp true
 
-# Add `setxkbmap` to .bashrc so it runs at login and sets the keyboard correctly
-tee -a .bashrc <<EOF
+# Add `setxkbmap` to .profile so it runs at login and sets the keyboard correctly
+tee -a .profile <<EOF
 
 # Set keyboard model and layout
 setxkbmap -model apple -layout gb
