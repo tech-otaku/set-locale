@@ -13,7 +13,7 @@
 sudo -v
 
 # Keep-alive: update existing `sudo` time stamp until `set-locale.sh` has finished
-#while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
+while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set timezone
 timedatectl set-timezone Europe/London
@@ -22,7 +22,6 @@ timedatectl set-timezone Europe/London
 timedatectl set-ntp true
 
 # Add `setxkbmap` to .bashrc so it runs at login and sets the keyboard correctly
-if ! grep -q "setxkbmap -model apple -layout gb" .bashrc; then
 tee -a .bashrc <<EOF
 
 # Set keyboard model and layout
@@ -73,8 +72,10 @@ amixer cset iface=MIXER,name="Master Playback Volume" 25 >/dev/null
 
 clear
 
+source .bashrc
+
 #read -p "Press enter to logout"
 #gnome-session-quit
 
-read -p "Press enter to restart"
-shutdown -r now
+#read -p "Press enter to restart"
+#shutdown -r now
