@@ -31,7 +31,6 @@ setxkbmap -model apple -layout gb
 printf "Use control [ctrl]+\ for # character\n\n"
 
 EOF
-fi
 
 # LANGUAGE: English (United Kingdom)
 # REGIONAL FORMATS: United Kingdom
