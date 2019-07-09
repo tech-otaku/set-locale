@@ -6,7 +6,7 @@
 # wget -O /home/steve/Downloads/set-locale.zip https://codeload.github.com/tech-otaku/set-locale/zip/master
 # cd /home/steve/Downloads
 # unzip /home/steve/Downloads/set-locale.zip
-# bash /home/steve/Downloads/set-locale.sh
+# bash /home/steve/Downloads/set-locale-master/set-locale.sh
 
 
 # Ask for the administrator password upfront
@@ -29,7 +29,7 @@ tee -a .bashrc <<EOF
 setxkbmap -model apple -layout gb
 
 # Message to display for each new Terminal window
-printf "Use 'control [ctrl]+\' for # character\n\n"
+printf "Use control [ctrl]+\ for # character\n\n"
 
 EOF
 fi
