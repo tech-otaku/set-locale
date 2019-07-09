@@ -71,10 +71,10 @@ amixer cset iface=MIXER,name="Master Playback Volume" 25 >/dev/null
 
 clear
 
-source ~/.bashrc
+#source ~/.bashrc
 
-#read -p "Press enter to logout"
-#gnome-session-quit
+read -p "Press enter to logout"
+gnome-session-quit
 
 #read -p "Press enter to restart"
 #shutdown -r now
