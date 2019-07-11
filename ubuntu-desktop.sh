@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# Basic keyboard, language and time configuration for a vanilla Ubuntu 18.04 LTS install on VMware Fusion (10.1.3)
+# Basic keyboard, language, time and display configuration for a vanilla Ubuntu 18.04.2 LTS install on VMware Fusion (11.1.0)
 
-# USAGE: 
+# USAGE: sudo bash /home/steve/Desktop/ubuntu-desktop.sh
 
 
 if [ -f /home/steve/set-locale.run ]; then
