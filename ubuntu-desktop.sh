@@ -38,9 +38,12 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 # Set timezone
 timedatectl set-timezone Europe/London
+#gsettings set org.gnome.desktop.datetime automatic-timezone true
 
 # Enable network time synchronization
 timedatectl set-ntp true
+
+
 	
 	
 	
@@ -59,7 +62,12 @@ setxkbmap -model apple -layout gb
 # Message to display for each new Terminal window
 printf "Use control [ctrl]+\ for # character\n\n"
 
+alias digio='ssh -p 7822 -o VisualHostKey=yes steve@45.55.154.177'
+alias hetzner='ssh -p 7822 -o VisualHostKey=yes steve@116.203.135.122'
+
 EOF
+
+gsettings set org.gnome.desktop.input-sources sources  "[('xkb', 'gb'), ('xkb', 'gb+mac')]"
 
 
 # LANGUAGE: English (United Kingdom)
@@ -120,6 +128,16 @@ gsettings set org.gtk.Settings.FileChooser show-hidden  true
 
 
 # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# 
+#
+# 
+
+gsettings set org.gnome.desktop.peripherals.mouse natural-scroll true
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 # FORCE DISPLAY OF GRUB MENU AT BOOT
 #
 # SOURCE: https://askubuntu.com/a/1078723
@@ -155,7 +173,7 @@ gsettings set org.gnome.desktop.interface scaling-factor 2
 sudo tee /usr/share/glib-2.0/schemas/93_hidpi.gschema.override <<EOF
 [org.gnome.desktop.interface]
 scaling-factor=2
-text-scaling-factor=0.87
+text-scaling-factor=0.9
 EOF
 
 sudo glib-compile-schemas /usr/share/glib-2.0/schemas
@@ -176,6 +194,25 @@ sudo glib-compile-schemas /usr/share/glib-2.0/schemas
 sudo sed -i 's/#GRUB_GFXMODE=640x480/#GRUB_GFXMODE=640x480\nGRUB_GFXMODE=1152x864x32\nGRUB_GFXPAYLOAD_LINUX=keep\n#GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"/g' /etc/default/grub
 
 sudo update-grub
+
+
+
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# SCREEN LOCK
+#
+# 
+
+# Disable automatic screen lock
+gsettings set org.gnome.desktop.screensaver lock-enabled false
+
+
+# Enable automatic screen lock
+#gsettings set org.gnome.desktop.screensaver lock-enabled true
+
+
+# Lock screen after 30 minutes
+#gsettings set org.gnome.desktop.screensaver lock-delay uint32 1800
 
 
 
